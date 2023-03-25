@@ -6,4 +6,4 @@ function onkoKirjautunut(){
         document.getElementById("tervetuloa_teksti").textContent += "  jape!";
     }
 }
-
+ 
