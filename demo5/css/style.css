@@ -4,11 +4,11 @@
 /*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i,700,800&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Arial:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
 
 /*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
- 2) font-family: 'Poppins', sans-serif;
+ 2) font-family: 'Arial', sans-serif;
  ----------------------------------------*****/
 
 
@@ -42,7 +42,7 @@ html {
 body {
      color: #666666;
      font-size: 14px;
-     font-family: 'Poppins', sans-serif;
+     font-family: 'Arial', sans-serif;
      line-height: 1.80857;
      font-weight: normal;
 }
@@ -119,6 +119,7 @@ h6 a {
 
 button:focus {
      outline: none;
+     border-radius: 5px;
 }
 
 ul,
@@ -317,7 +318,7 @@ button {
      line-height: 30px;
      height: 50px !important;
      display: block;
-     text-align: left;
+     text-align: right;
      padding-top: 36px;
 }
 
@@ -412,15 +413,16 @@ ul.infomaco li a {
 
 .zon_text {
      max-width: 439px;
-     float: right;
+     float: left;
 }
 
 .coff_img {
      padding-right: 70px;
+     border: 2px dashed red;
 }
 
 .zon_text h1 {
-     text-align: left;
+     text-align: right;
      font-size: 121px;
      line-height: 120px;
      color: #fff;
@@ -430,7 +432,7 @@ ul.infomaco li a {
 }
 
 .zon_text p {
-     text-align: left;
+     text-align: right;
      padding: 0;
      font-size: 17px;
      line-height: 25px;
@@ -470,7 +472,7 @@ ul.infomaco li a {
 .relative {
      left: 0;
      right: 0;
-     text-align: center;
+     text-align: left;
      position: inherit;
 }
 
@@ -765,7 +767,7 @@ ul.infomaco li a {
 .testimonial_pro {
      display: flex;
      align-items: center;
-     text-align: left;
+     text-align: center;
      flex-wrap: wrap;
      padding-left: 26px;
      margin-top: -40px;
@@ -778,7 +780,7 @@ ul.infomaco li a {
      line-height: 16px;
      font-weight: bold;
      text-transform: uppercase;
-     font-style: italic;
+     font-style: oblique;
      padding-left: 25px;
 }
 
@@ -787,7 +789,7 @@ ul.infomaco li a {
      text-transform: initial;
      font-size: 14px;
      font-weight: bold;
-     font-style: italic;
+     font-style: oblique;
      line-height: 10px;
 }
 
