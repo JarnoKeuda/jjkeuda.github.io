@@ -387,7 +387,7 @@ ul.infomaco li a {
 /** banner section **/
 
 .full_bg {
-     background-image: linear-gradient(to right, #1f1c45 67%, #ffc107 33%);
+     background-image: linear-gradient(to right, #e83e8c 67%, #ffc107 33%);
      border: #fff solid 20px;
      border-top: inherit;
      border-right: inherit;
