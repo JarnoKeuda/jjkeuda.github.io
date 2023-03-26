@@ -2,42 +2,34 @@ document.addEventListener("DOMContentLoaded", onkoKirjautunut);
 
 function onkoKirjautunut(){
     if(localStorage.getItem("kirjautunut") === 'kylla'){
-        document.getElementById("tervetuloa_teksti").textContent = "Tervetuloa " + localStorage.getItem("nimi");
-        document.getElementById("kirjaudu_lomake").remove();
-        var kirjauduUlosNappi = document.createElement("input");
-        kirjauduUlosNappi.type = "submit";
-        kirjauduUlosNappi.value = "Kirjaudu ulos";
-        kirjauduUlosNappi.onclick = function() {
-            localStorage.removeItem("nimi");
-            localStorage.removeItem("kirjautunut");
-            document.getElementById("kirjautumis_lomake").appendChild(kirjauduLomake);
-            document.getElementById("tervetuloa_teksti").textContent = "Tervetuloa";
-        }
-        document.getElementById("kirjautumis_lomake").appendChild(kirjauduUlosNappi);
+        document.getElementById("tervetuloa_teksti").textContent += "  " + localStorage.getItem("nimi");
+        document.getElementById("kirjautumis_lomake").style.display = "none";
+        document.getElementById("kirjaudu_ulos_nappi").style.display = "inline-block";
     }
 }
+
+document.getElementById("kirjaudu_nappi").addEventListener("click", function(e) {
+    e.preventDefault();
+    kirjaudu();
+});
+
+document.getElementById("kirjaudu_ulos_nappi").addEventListener("click", function() {
+    kirjauduUlos();
+});
 
 function kirjaudu(){
     localStorage.setItem("nimi", document.getElementById("nimi").value);
     localStorage.setItem("kirjautunut", "kylla");
-    var tervetuloaTeksti = document.getElementById("tervetuloa_teksti");
-    tervetuloaTeksti.textContent = "Tervetuloa " + localStorage.getItem("nimi");
-    var kirjauduLomake = document.getElementById("kirjaudu_lomake");
-    kirjauduLomake.remove();
-    var kirjauduUlosNappi = document.createElement("input");
-    kirjauduUlosNappi.type = "submit";
-    kirjauduUlosNappi.value = "Kirjaudu ulos";
-    kirjauduUlosNappi.onclick = function() {
-        localStorage.removeItem("nimi");
-        localStorage.removeItem("kirjautunut");
-        document.getElementById("kirjautumis_lomake").appendChild(kirjauduLomake);
-        tervetuloaTeksti.textContent = "Tervetuloa";
-    }
-    document.getElementById("kirjautumis_lomake").appendChild(kirjauduUlosNappi);
+    document.getElementById("kirjaudu_ulos_nappi").style.display = "inline-block";
+    document.getElementById("tervetuloa_teksti").textContent = "Tervetuloa " + localStorage.getItem("nimi");
+    document.getElementById("kirjautumis_lomake").style.display = "none";
 }
 
-var kirjauduLomake = document.getElementById("kirjautumis_lomake");
-kirjauduLomake.addEventListener("submit", function(event) {
-    event.preventDefault();
-    kirjaudu();
-});
+function kirjauduUlos(){
+    localStorage.removeItem("nimi");
+    localStorage.removeItem("kirjautunut");
+    document.getElementById("kirjautumis_lomake").style.display = "block";
+    document.getElementById("nimi").value = "";
+    document.getElementById("kirjaudu_ulos_nappi").style.display = "none";
+    document.getElementById("tervetuloa_teksti").textContent = "Tervetuloa";
+}
