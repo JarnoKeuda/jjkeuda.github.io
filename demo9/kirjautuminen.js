@@ -9,6 +9,7 @@ function onkoKirjautunut(){
 }
 
 function kirjaudu(){
+    event.preventDefault.Default();
     localStorage.setItem("nimi", document.getElementById("nimi").value);
     localStorage.setItem("kirjautunut", "kylla");
     document.getElementById("kirjaudu_ulos_nappi").style.display = "inline-block";
