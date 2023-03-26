@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>JJ's Global</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="HTML5 website template">
-  <meta name="keywords" content="global, template, html, sass, jquery">
-  <meta name="author" content="Bucky Maler">
-  <link rel="stylesheet" href="assets/css/main.css">
-<html lang="fi">
-    <meta charset="UTF-8" />
-    <title>demo9</title>
-    <script type="text/javascript" src="kirjautuminen.js"></script>
+  <head>
+    <title>JJ's Global</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="HTML5 website template">
+    <meta name="keywords" content="global, template, html, sass, jquery">
+    <meta name="author" content="Bucky Maler">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+      .kirjaudu_nappi {
+        color: #0f33ff;
+      }
+      .kirjautumis_lomake {
+        color: #0f33ff;
+      }
+    </style>
+  </head>
   <body>
     <p id="tervetuloa_teksti">Tervetuloa</p>
-    <form id="kirjautumis_lomake">
+    <form class="kirjautumis_lomake">
       <input id="nimi" type="text" placeholder="syötä nimesi" value="" />
-      <input id="kirjaudu_nappi" type="submit" value="Kirjaudu sisään" />
+      <input class="kirjaudu_nappi" type="submit" value="Kirjaudu sisään" />
     </form>
+    <script type="text/javascript" src="kirjautuminen.js"></script>
   </body>
-</head>
-<body>
 
 <!-- notification for small viewports and landscape oriented smartphones -->
 <div class="device-notification">
