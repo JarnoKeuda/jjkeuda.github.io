@@ -2,15 +2,35 @@
 
 
 #kirjautumis_lomake input[type="text"] {
-    background-color: blue !important;
-  }
-  
+  background-color: blue !important;
+}
+
 #kirjautumis_lomake input[type="submit"] {
   background-color: blue !important;
-}#kirjautumis_lomake #nimi {
-    background-color: blue;
-  }
-  
-  #kirjautumis_lomake #kirjaudu_nappi {
-    background-color: blue;
-  }
+}
+
+#kirjautumis_lomake #nimi {
+  background-color: blue;
+  color: white;
+  padding: 5px;
+  border: none;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+#kirjautumis_lomake #kirjaudu_nappi {
+  background-color: blue;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  font-size: 18px;
+}
+
+#kirjautumis_lomake #kirjaudu_ulos_nappi {
+  background-color: blue;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  font-size: 18px;
+  margin-left: 10px;
+}
